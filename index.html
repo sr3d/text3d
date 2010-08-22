@@ -1,0 +1,49 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title>Github File Finder</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <script type="text/javascript" src="js/prototype.js" charset="utf-8"></script> 
+  <script type="text/javascript" src="js/vendors/threejs/build/Three.js" charset="utf-8"></script> 
+  <link href="css/styles.css" media="all" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    
+<script type="text/javascript">
+var camera, scene, renderer;
+
+init();
+setInterval( loop, 1000 / 60 );
+
+function init() {
+
+       // var material = new THREE.ColorFillMaterial(hex = parseInt("AAAADD",16), opacity = 1);
+        //var text = new THREE.Text("Hello World", material);
+        var text = new THREE.Text("Hello World")
+        // var text = new THREE.Particle(material);
+        //text.parent = canvas.model.canvas_group;
+        // text.autoUpdateMatrix = true;
+
+        text.context = "3d";
+        text.fontScaling = true;
+        text.scale.setScalar(1);
+        text.position.set(5, 0.1, 0.5);
+        canvas.model.scene.add(text);
+
+
+}
+
+ renderer.render( scene, camera );
+// function loop() {
+// 
+//     renderer.render( scene, camera );
+// 
+// }
+</script>
+</body>
+</html>
+
+
